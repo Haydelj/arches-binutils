@@ -21,6 +21,23 @@
 #ifndef RISCV_ENCODING_H
 #define RISCV_ENCODING_H
 /* Instruction opcode macros.  */
+
+#define MATCH_TRAXAMOIN 0x0000b
+#define MASK_TRAXAMOIN  0xfffff07f
+#define MATCH_BOXISECT 0x0800b
+#define MASK_BOXISECT  0xfffff07f
+#define MATCH_TRIISECT 0x1000b
+#define MASK_TRIISECT  0xfffff07f
+#define MATCH_LBRAY 0x100b
+#define MASK_LBRAY 0x0000707f
+#define MATCH_SBRAY 0x200b
+#define MASK_SBRAY 0x0000707f
+#define MATCH_CSHIT 0x300b
+#define MASK_CSHIT 0x0000707f
+
+#define MATCH_FRCP_S 0x60000053
+#define MASK_FRCP_S  0xfff0007f
+
 #define MATCH_SLLI_RV32 0x1013
 #define MASK_SLLI_RV32  0xfe00707f
 #define MATCH_SRLI_RV32 0x5013

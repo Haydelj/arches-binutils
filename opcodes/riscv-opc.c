@@ -312,6 +312,16 @@ const struct riscv_opcode riscv_opcodes[] =
 {
 /* name, xlen, isa, operands, match, mask, match_func, pinfo.  */
 
+{"fchthrd",   0, INSN_CLASS_I, "d",         MATCH_TRAXAMOIN, MASK_TRAXAMOIN, match_opcode, 0 },
+{"boxisect",    0, INSN_CLASS_F, "D",         MATCH_BOXISECT, MASK_BOXISECT, match_opcode, 0 },
+{"triisect",    0, INSN_CLASS_F, "d",         MATCH_TRIISECT, MASK_TRIISECT, match_opcode, 0 },
+{"lbray",       0, INSN_CLASS_F, "D,o(s)",    MATCH_LBRAY, MASK_LBRAY, match_opcode, 0 },
+{"sbray",       0, INSN_CLASS_F, "T,q(s)",    MATCH_SBRAY, MASK_SBRAY, match_opcode, INSN_DREF|INSN_4_BYTE },
+{"cshit",       0, INSN_CLASS_F, "T,q(s)",    MATCH_CSHIT, MASK_CSHIT, match_opcode, INSN_DREF|INSN_4_BYTE },
+
+{"frcp.s",      0, INSN_CLASS_F, "D,S",       MATCH_FRCP_S|MASK_RM, MASK_FRCP_S|MASK_RM, match_opcode, 0 },
+{"frcp.s",      0, INSN_CLASS_F, "D,S,m",     MATCH_FRCP_S, MASK_FRCP_S, match_opcode, 0 },
+
 /* Standard hints.  */
 {"prefetch.i",  0, INSN_CLASS_ZICBOP, "f(s)", MATCH_PREFETCH_I, MASK_PREFETCH_I, match_opcode, 0 },
 {"prefetch.r",  0, INSN_CLASS_ZICBOP, "f(s)", MATCH_PREFETCH_R, MASK_PREFETCH_R, match_opcode, 0 },
